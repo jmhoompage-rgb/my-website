@@ -1,20 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
+import HeroVisual from "./hero-visual";
 
 const HEADLINE = ["당신의 피부,", "본연의 맑음을", "되찾는 시간"];
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-accent-soft via-white to-canvas">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-accent/20 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-40 bottom-0 h-[24rem] w-[24rem] rounded-full bg-accent/10 blur-3xl"
-      />
+      <HeroVisual />
 
       <div className="relative mx-auto w-full max-w-content px-6 pt-24 md:px-10">
         <motion.p
