@@ -5,7 +5,9 @@ export default function Doctor() {
     <section id="doctor" className="bg-white">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-6 py-24 md:px-10 md:py-32 lg:grid-cols-2">
         <FadeIn>
-          <div className="aspect-[4/5] w-full max-w-md rounded-2xl bg-gradient-to-br from-accent-soft via-white to-accent/10" />
+          <div className="flex aspect-[4/5] w-full max-w-md items-center justify-center rounded-2xl bg-white text-sm text-muted ring-1 ring-black/5">
+            원장 사진 자리
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
