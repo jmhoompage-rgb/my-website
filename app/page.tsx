@@ -1,10 +1,10 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import TrustBar from "@/components/trust-bar";
-import Philosophy from "@/components/philosophy";
-import Services from "@/components/services";
-import Process from "@/components/process";
-import Doctor from "@/components/doctor";
+import SpecsBar from "@/components/specs-bar";
+import Highlights from "@/components/highlights";
+import Rooms from "@/components/rooms";
+import Facility from "@/components/facility";
+import HowTo from "@/components/how-to";
 import Location from "@/components/location";
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
@@ -15,11 +15,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustBar />
-        <Philosophy />
-        <Services />
-        <Process />
-        <Doctor />
+        <SpecsBar />
+        <Highlights />
+        <Rooms />
+        <Facility />
+        <HowTo />
         <Location />
         <Faq />
       </main>
