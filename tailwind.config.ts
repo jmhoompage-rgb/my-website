@@ -8,14 +8,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#101820",
-        muted: "#4B5563",
-        surface: "#FFFFFF",
-        canvas: "#F7F9FA",
+        bg: "#0A0A0F",
+        surface: "#13131A",
+        surface2: "#1B1B24",
+        text: "#F5F5F0",
+        muted: "#9C9CA8",
+        line: "rgba(245,245,240,0.08)",
         accent: {
-          DEFAULT: "#3E7CB1",
-          soft: "#EAF3FA",
-          deep: "#245380",
+          DEFAULT: "#FF5A1F",
+          soft: "rgba(255,90,31,0.12)",
+          deep: "#CC3F0E",
         },
       },
       fontFamily: {

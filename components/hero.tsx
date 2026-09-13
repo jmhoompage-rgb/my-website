@@ -1,69 +1,96 @@
 "use client";
 
 import { motion } from "motion/react";
-import FadeIn from "./fade-in";
 
-const HEADLINE = ["당신의 피부,", "본연의 맑음을", "되찾는 시간"];
+const HEADLINE = ["나만의 룸에서,", "압도적으로 몰입한다"];
+
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
+
+const line = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 export default function Hero() {
   return (
-    <section className="bg-canvas pt-32 pb-24 md:pb-32">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-6 md:px-10 lg:grid-cols-2">
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-5 text-sm font-medium tracking-wide text-accent-deep"
+    <section className="relative flex h-screen min-h-[640px] items-center overflow-hidden bg-bg">
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(60% 60% at 20% 20%, rgba(255,90,31,0.16), transparent 60%), radial-gradient(50% 50% at 85% 75%, rgba(255,90,31,0.10), transparent 60%), #0A0A0F",
+        }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute -inset-40 opacity-40"
+        style={{
+          background:
+            "radial-gradient(40% 40% at 50% 50%, rgba(255,90,31,0.18), transparent 70%)",
+        }}
+        animate={{ x: [0, 60, -40, 0], y: [0, -40, 30, 0] }}
+        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(245,245,240,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(245,245,240,0.6) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-content px-6 md:px-10">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-5 text-sm font-medium tracking-wide text-accent"
+        >
+          천안 두정동 · 전국 최고 사양 룸 PC방
+        </motion.p>
+
+        <motion.h1
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="max-w-3xl text-[40px] font-bold leading-[1.15] tracking-tighter text-text md:text-[76px]"
+        >
+          {HEADLINE.map((text) => (
+            <motion.span key={text} variants={line} className="block">
+              {text}
+            </motion.span>
+          ))}
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg"
+        >
+          A구역 1인룸부터 D구역 6인룸까지. AMD 9800X3D · RTX 5090부터
+          채운 완전히 독립된 빵야PC방만의 공간입니다.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.65 }}
+          className="mt-10"
+        >
+          <a
+            href="#zones"
+            className="inline-flex items-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-accent-deep md:text-base"
           >
-            CLAIRE DERMATOLOGY CLINIC
-          </motion.p>
-
-          <h1 className="max-w-2xl text-[40px] font-bold leading-[1.15] tracking-tighter text-ink md:text-[64px]">
-            {HEADLINE.map((line, i) => (
-              <motion.span
-                key={line}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 + i * 0.12 }}
-                className="block"
-              >
-                {line}
-              </motion.span>
-            ))}
-          </h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg"
-          >
-            정밀한 진단과 절제된 시술, 그리고 사후 케어까지.
-            <br className="hidden md:block" />
-            클레어는 꼭 필요한 만큼만 제안합니다.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.75 }}
-            className="mt-10"
-          >
-            <a
-              href="#location"
-              className="inline-flex items-center rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-accent-deep md:text-base"
-            >
-              상담 예약하기
-            </a>
-          </motion.div>
-        </div>
-
-        <FadeIn delay={0.2}>
-          <div className="flex aspect-video w-full items-center justify-center rounded-2xl bg-white text-sm text-muted ring-1 ring-black/5">
-            히어로 이미지/영상 자리 (16:9)
-          </div>
-        </FadeIn>
+            룸·존 둘러보기
+          </a>
+        </motion.div>
       </div>
     </section>
   );
