@@ -2,8 +2,9 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import SpecsBar from "@/components/specs-bar";
 import Highlights from "@/components/highlights";
-import Rooms from "@/components/rooms";
+import Zones from "@/components/zones";
 import Facility from "@/components/facility";
+import Menu from "@/components/menu";
 import HowTo from "@/components/how-to";
 import Location from "@/components/location";
 import Faq from "@/components/faq";
@@ -17,8 +18,9 @@ export default function Home() {
         <Hero />
         <SpecsBar />
         <Highlights />
-        <Rooms />
+        <Zones />
         <Facility />
+        <Menu />
         <HowTo />
         <Location />
         <Faq />

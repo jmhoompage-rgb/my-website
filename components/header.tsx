@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 
 const NAV = [
-  { label: "룸 소개", href: "#rooms" },
+  { label: "룸·존", href: "#zones" },
   { label: "시설", href: "#facility" },
+  { label: "메뉴", href: "#menu" },
   { label: "이용안내", href: "#how-to" },
   { label: "오시는길", href: "#location" },
   { label: "FAQ", href: "#faq" },

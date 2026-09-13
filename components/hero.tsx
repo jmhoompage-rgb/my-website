@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-5 text-sm font-medium tracking-wide text-accent"
         >
-          천안 두정동 · 룸 전용 PC방
+          천안 두정동 · 전국 최고 사양 룸 PC방
         </motion.p>
 
         <motion.h1
@@ -74,8 +74,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg"
         >
-          1인실부터 6인실까지, 완전히 독립된 룸. 라이젠9 · 지포스 RTX 5080으로
-          채운 빵야PC방만의 공간입니다.
+          인피니티존부터 커플룸, 1인석까지. AMD 9800X3D · RTX 5090부터
+          채운 완전히 독립된 빵야PC방만의 공간입니다.
         </motion.p>
 
         <motion.div
@@ -85,10 +85,10 @@ export default function Hero() {
           className="mt-10"
         >
           <a
-            href="#rooms"
+            href="#zones"
             className="inline-flex items-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-accent-deep md:text-base"
           >
-            룸 둘러보기
+            룸·존 둘러보기
           </a>
         </motion.div>
       </div>

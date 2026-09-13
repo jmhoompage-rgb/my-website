@@ -1,10 +1,10 @@
 import FadeIn from "./fade-in";
 
 const STEPS = [
-  { step: "01", title: "룸 선택", desc: "인원에 맞는 1·2·4·6인실 중 선택합니다." },
-  { step: "02", title: "실시간 예약", desc: "원하는 시간대 잔여 룸을 확인하고 예약합니다." },
-  { step: "03", title: "방문 입장", desc: "예약 확인 후 배정된 룸으로 바로 입장합니다." },
-  { step: "04", title: "몰입 플레이", desc: "라이젠9 · RTX 5080 룸에서 마음껏 즐깁니다." },
+  { step: "01", title: "존 선택", desc: "인피니티존부터 1인석까지, 취향에 맞는 존을 선택합니다." },
+  { step: "02", title: "실시간 예약", desc: "원하는 시간대 잔여 좌석을 확인하고 예약합니다." },
+  { step: "03", title: "방문 입장", desc: "예약 확인 후 배정된 룸·좌석으로 바로 입장합니다." },
+  { step: "04", title: "몰입 플레이", desc: "전국 최고 사양으로 마음껏 즐깁니다." },
 ];
 
 export default function HowTo() {
