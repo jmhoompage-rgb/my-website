@@ -74,7 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg"
         >
-          인피니티존부터 커플룸, 1인석까지. AMD 9800X3D · RTX 5090부터
+          A구역 1인룸부터 D구역 6인룸까지. AMD 9800X3D · RTX 5090부터
           채운 완전히 독립된 빵야PC방만의 공간입니다.
         </motion.p>
 

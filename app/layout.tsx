@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import KakaoButton from "@/components/kakao-button";
 
 export const metadata: Metadata = {
   title: "빵야PC방 | 천안 두정동 전국 최고 사양 룸 PC방",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="bg-bg font-sans text-text antialiased">
         {children}
+        <KakaoButton />
       </body>
     </html>
   );

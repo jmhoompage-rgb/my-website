@@ -1,8 +1,8 @@
 import FadeIn from "./fade-in";
 
 const SPECS = [
-  { value: "9800X3D · RTX 5090", label: "인피니티존 · BenQ 600Hz" },
-  { value: "RTX 5080 · 360Hz", label: "슈프림존 · 팀룸 · 프라이빗석" },
+  { value: "9800X3D · RTX 5090", label: "A구역 1인룸 · BenQ 600Hz" },
+  { value: "RTX 5080 · 360Hz", label: "B·C·D구역 전 룸 적용" },
   { value: "래피드트리거", label: "전 좌석 자석축 키보드" },
   { value: "QHD 와이드", label: "일반석 삼성 모니터" },
 ];

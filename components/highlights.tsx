@@ -19,9 +19,9 @@ export default function Highlights() {
         <FadeIn delay={0.2}>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
             같은 사양이라도 옆자리 시선과 소음까지 신경 써야 한다면 몰입은
-            깨집니다. 빵야PC방은 좌석이 아닌 룸과 존을 팔고, 세계 최초로
-            도입한 AMD 9800X3D · RTX 5090 인피니티존부터 1인석까지 다섯
-            가지 공간으로 완전히 독립된 몰입을 제공합니다.
+            깨집니다. 빵야PC방은 좌석이 아닌 룸을 팔고, 세계 최초로 도입한
+            AMD 9800X3D · RTX 5090부터 A~D구역 네 가지 룸으로 완전히
+            독립된 몰입을 제공합니다.
           </p>
         </FadeIn>
 
@@ -34,7 +34,7 @@ export default function Highlights() {
             </div>
             {[
               ["좌석 구조", "트인 오픈 좌석", "문이 있는 완전 독립 룸·존"],
-              ["최고 사양", "동일 사양 일괄 적용", "AMD 9800X3D · RTX 5090 인피니티존"],
+              ["최고 사양", "동일 사양 일괄 적용", "A구역 AMD 9800X3D · RTX 5090"],
               ["모니터", "FHD 위주", "일반석도 삼성 QHD 와이드"],
               ["키보드", "일반 멤브레인/기계식", "전 좌석 래피드트리거 자석축"],
             ].map(([label, normal, us]) => (

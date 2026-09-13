@@ -6,6 +6,7 @@ const NAV = [
   { label: "룸·존", href: "#zones" },
   { label: "시설", href: "#facility" },
   { label: "메뉴", href: "#menu" },
+  { label: "리뷰이벤트", href: "#review-event" },
   { label: "이용안내", href: "#how-to" },
   { label: "오시는길", href: "#location" },
   { label: "FAQ", href: "#faq" },

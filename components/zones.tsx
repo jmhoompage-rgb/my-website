@@ -3,48 +3,43 @@ import FadeIn from "./fade-in";
 const ZONES = [
   {
     seats: 1,
-    title: "인피니티존",
-    tagline: "전국 최초 · 궁극의 몰입 좌석",
+    zone: "A구역",
+    title: "1인룸",
+    tagline: "전국 최고 사양을 온전히 혼자",
     spec: "AMD 9800X3D · RTX 5090 · BenQ 600Hz",
-    desc: "오디세이 G9 49인치 울트라와이드에 ASUS ROG 풀 장비를 세팅한 빵야PC방의 플래그십 좌석. 최고 사양을 온전히 혼자 누립니다.",
-    tags: ["최상위 사양", "49인치 초몰입", "단 하나뿐인 좌석"],
-    count: "한정 좌석",
-  },
-  {
-    seats: 2,
-    title: "슈프림존",
-    tagline: "로망을 실현하는 하이엔드 2인",
-    spec: "RTX 5080 · BenQ 360Hz",
-    desc: "둘만의 프리미엄 공간에서 즐기는 최상급 듀오존. 고사양과 프라이버시를 동시에 원하는 분께 추천합니다.",
-    tags: ["하이엔드 듀오", "데이트", "특별한 날"],
-    count: "프라이빗 존",
-  },
-  {
-    seats: 5,
-    title: "팀룸",
-    tagline: "ASUS ROG룸 · Glorious룸",
-    spec: "RTX 5080 · BenQ 360Hz",
-    desc: "5인 스쿼드를 위한 완전 독립 룸 3개를 테마별로 준비했습니다. 내전과 대회 연습에 최적화된 구성입니다.",
-    tags: ["내전", "스쿼드 연습", "테마 룸"],
-    count: "3개 룸 보유",
-  },
-  {
-    seats: 2,
-    title: "커플룸",
-    tagline: "완전 분리된 단독 프라이빗",
-    spec: "RTX 5080 · 래피드트리거 키보드",
-    desc: "둘만 사용하는 완전 독립 룸. 옆 룸과 완벽히 분리되어 눈치 보지 않고 편하게 즐길 수 있습니다.",
-    tags: ["커플", "친구 듀오", "완전 독립"],
+    desc: "완전히 분리된 단독 룸에서 빵야PC방 최상위 사양을 독점합니다. 주변 시선 없이 랭크에만 집중하세요.",
+    tags: ["최상위 사양", "솔로 랭크", "완전 몰입"],
     count: "35개 룸",
   },
   {
-    seats: 1,
-    title: "프라이빗 1인석",
-    tagline: "완전 분리된 단독 부스",
-    spec: "RTX 5080 · 래피드트리거 키보드",
-    desc: "혼자만의 몰입이 필요한 순간을 위한 완전 분리형 단독석. 주변 시선 없이 랭크에만 집중하세요.",
-    tags: ["솔로 랭크", "장시간 이용", "완전 몰입"],
-    count: "35개 석",
+    seats: 2,
+    zone: "B구역",
+    title: "2인 커플룸",
+    tagline: "둘만의 프라이빗 공간",
+    spec: "RTX 5080 · BenQ 360Hz",
+    desc: "친구, 연인과 나란히. 완전히 독립된 룸이라 옆자리 신경 없이 편하게 즐길 수 있습니다.",
+    tags: ["커플", "듀오 큐", "완전 독립"],
+    count: "35개 룸",
+  },
+  {
+    seats: 4,
+    zone: "C구역",
+    title: "4인룸",
+    tagline: "스쿼드, 딱 맞는 팀 단위",
+    spec: "RTX 5080 · BenQ 360Hz",
+    desc: "내전이나 팀 게임에 최적화된 인원 구성. 룸 안에서 바로 소통하며 합을 맞출 수 있습니다.",
+    tags: ["내전", "팀 게임", "친구 모임"],
+    count: "예약제 운영",
+  },
+  {
+    seats: 6,
+    zone: "D구역",
+    title: "다인원 6인룸",
+    tagline: "파티룸, 함께라서 특별한",
+    spec: "RTX 5080 · BenQ 360Hz",
+    desc: "생일, 모임, 대회 관전까지. 넓은 룸에서 여섯 명이 함께 즐기는 이벤트 공간입니다.",
+    tags: ["모임", "생일파티", "단체 관전"],
+    count: "예약제 운영",
   },
 ];
 
@@ -54,22 +49,23 @@ export default function Zones() {
       <div className="mx-auto max-w-content px-6 py-24 md:px-10 md:py-32">
         <FadeIn>
           <p className="text-sm font-medium tracking-wide text-accent">
-            ROOM &amp; ZONE
+            ROOM
           </p>
           <h2 className="mt-4 text-[28px] font-semibold tracking-tight text-text md:text-[44px]">
-            취향과 인원에 맞춘 5가지 존
+            인원에 맞춘 4가지 구역
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
             일반석에도 삼성 QHD 와이드 모니터를 적용했지만, 빵야PC방의 진짜
-            차별점은 완전히 독립된 룸과 존입니다.
+            차별점은 완전히 독립된 A~D구역 룸입니다.
           </p>
         </FadeIn>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {ZONES.map((zone, i) => (
-            <FadeIn key={zone.title} delay={(i % 2) * 0.1}>
+            <FadeIn key={zone.zone} delay={(i % 2) * 0.1}>
               <div className="group h-full overflow-hidden rounded-2xl border border-line bg-bg transition-colors hover:border-accent/40">
                 <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-surface2">
+                  {/* swap this gradient for an <img> once real room photos land in public/rooms/ */}
                   <div
                     className="absolute inset-0 opacity-70 transition-transform duration-500 group-hover:scale-105"
                     style={{
@@ -85,6 +81,9 @@ export default function Zones() {
                       />
                     ))}
                   </div>
+                  <span className="absolute left-4 top-4 rounded-full bg-bg/70 px-3 py-1 text-xs font-medium text-accent backdrop-blur">
+                    {zone.zone}
+                  </span>
                   <span className="absolute bottom-4 right-4 rounded-full bg-bg/70 px-3 py-1 text-xs font-medium text-muted backdrop-blur">
                     {zone.count}
                   </span>
@@ -92,7 +91,7 @@ export default function Zones() {
 
                 <div className="p-8">
                   <h3 className="text-xl font-semibold text-text">
-                    {zone.title}
+                    {zone.zone} · {zone.title}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-accent">
                     {zone.tagline}

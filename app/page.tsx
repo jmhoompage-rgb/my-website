@@ -5,6 +5,7 @@ import Highlights from "@/components/highlights";
 import Zones from "@/components/zones";
 import Facility from "@/components/facility";
 import Menu from "@/components/menu";
+import ReviewEvent from "@/components/review-event";
 import HowTo from "@/components/how-to";
 import Location from "@/components/location";
 import Faq from "@/components/faq";
@@ -21,6 +22,7 @@ export default function Home() {
         <Zones />
         <Facility />
         <Menu />
+        <ReviewEvent />
         <HowTo />
         <Location />
         <Faq />
